@@ -14,7 +14,7 @@
 <script>
     import { reactive, toRefs } from 'vue'
     import { useRouter } from 'vue-router'
-    import TabBar from '@/components/TabBar.vue';
+    import TabBar from '@/components/TabBar';
     export default {
         components: {
             TabBar

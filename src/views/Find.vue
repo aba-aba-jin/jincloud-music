@@ -8,29 +8,38 @@
             <img alt='' :src='state.discernIcon' class="JIN-discern" />
         </s-header>
         <FindSwiper :images="state.images" />
-        <!-- <SongSheet :title="'aa'" /> -->
+        <SongSheet
+            :title="'推荐歌单'"
+            :titleIcon="state.refreshIcon"
+            :actionIcon="state.playIcon"
+            :refresh="refresh"
+        />
     </div>
 </template>
 
 <script>
     import FindSwiper from '@/components/FindSwiper';
-    // import SongSheet from '@/components/SongSheet';
+    import SongSheet from '@/components/SongSheet';
     import sHeader from '@/components/SimpleHeader';
     import discernIcon from '@assets/discern.png';
     import searchIcon from '@assets/search.png';
+    import refreshIcon from '@assets/refresh.png';
+    import playIcon from '@assets/play.png';
     import { reactive } from 'vue';
 
     export default {
         components:{
             FindSwiper,
             sHeader,
-            // SongSheet
+            SongSheet
         },
         
         setup() {
             const state = reactive({
                 discernIcon,
                 searchIcon,
+                refreshIcon,
+                playIcon,
                 serchValue: '',
                 placeholder: '请输入搜索关键词',
                 images: [
@@ -39,8 +48,13 @@
                 ]
             })
 
+            const refresh = () => {
+                // TODO 刷新
+            }
+
             return {
                 state,
+                refresh
             }
         }
     }

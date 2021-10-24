@@ -37,10 +37,10 @@ module.exports = {
   },
 
   pluginOptions: { // 第三方插件配置
-      'style-resources-loader': {
-          preProcessor: 'less',
-          patterns: [path.resolve(__dirname, 'src/index.less')]
-      }
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [path.resolve(__dirname, 'src/index.less')]
+    }
   },
 
   // webpack-dev-server 相关配置  
